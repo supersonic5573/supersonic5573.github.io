@@ -16,8 +16,14 @@
             text-align: center;
             font-size: 2em;
         }
-        .poem {
+        .container {
+            display: flex;
+            justify-content: space-between;
             margin-top: 20px;
+        }
+        .poem {
+            flex: 1;
+            margin-right: 20px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -27,35 +33,47 @@
             margin: 10px 0;
             text-align: center;
         }
+        .music-player {
+            flex: 0 0 330px; /* 固定宽度 */
+            height: 450px;   /* 固定高度 */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+        }
     </style>
 </head>
 <body>
 
-<h1>水调歌头</h1>
-<div class="poem">
-    <div class="line">明月几时有？</div>
-    <div class="line">把酒问青天。</div>
-    <div class="line">不知天上宫阙，</div>
-    <div class="line">今夕是何年。</div>
-    <div class="line">我欲乘风归去，</div>
-    <div class="line">又恐琼楼玉宇，</div>
-    <div class="line">高处不胜寒。</div>
-    <div class="line">起舞弄清影，</div>
-    <div class="line">何似在人间。</div>
-    <br>
-    <div class="line">转朱阁，低绮户，</div>
-    <div class="line">照无眠。</div>
-    <div class="line">不应有恨，</div>
-    <div class="line">何事长向别时圆？</div>
-    <div class="line">人有悲欢离合，</div>
-    <div class="line">月有阴晴圆缺，</div>
-    <div class="line">此事古难全。</div>
-    <div class="line">但愿人长久，</div>
-    <div class="line">千里共婵娟。</div>
+<div class="container">
+    <div class="poem">
+        <div class="line">明月几时有？</div>
+        <div class="line">把酒问青天。</div>
+        <div class="line">不知天上宫阙，</div>
+        <div class="line">今夕是何年。</div>
+        <div class="line">我欲乘风归去，</div>
+        <div class="line">又恐琼楼玉宇，</div>
+        <div class="line">高处不胜寒。</div>
+        <div class="line">起舞弄清影，</div>
+        <div class="line">何似在人间。</div>
+        <br>
+        <div class="line">转朱阁，低绮户，</div>
+        <div class="line">照无眠。</div>
+        <div class="line">不应有恨，</div>
+        <div class="line">何事长向别时圆？</div>
+        <div class="line">人有悲欢离合，</div>
+        <div class="line">月有阴晴圆缺，</div>
+        <div class="line">此事古难全。</div>
+        <div class="line">但愿人长久，</div>
+        <div class="line">千里共婵娟。</div>
+    </div>
+    <div class="music-player">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" 
+                src="//music.163.com/outchain/player?type=4&id=5310001&auto=1&height=430"></iframe>
+    </div>
 </div>
-<div>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=4&id=5310001&auto=1&height=430"></iframe>
-</div>
+
 </body>
 </html>
-
