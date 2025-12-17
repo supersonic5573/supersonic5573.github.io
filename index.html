@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@supersonic</title>
+    <title>supersonic</title>
     <style>
         body {
             font-family: "Microsoft YaHei", sans-serif;
@@ -43,6 +43,13 @@
             align-items: center; /* 垂直居中 */
             justify-content: center; /* 水平居中 */
         }
+        button {
+            margin: 20px auto;
+            display: block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -70,10 +77,20 @@
         <div class="line">千里共婵娟。</div>
     </div>
     <div class="music-player">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" 
-        src="//music.163.com/outchain/player?type=4&id=5310001&auto=1&height=430&muted=1"></iframe>
+        <iframe id="musicPlayer" frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" 
+                src="//music.163.com/outchain/player?type=4&id=5310001&auto=1&height=430&muted=1"></iframe>
     </div>
 </div>
+
+<button id="playButton">播放音乐</button>
+
+<script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        var musicPlayer = document.getElementById('musicPlayer');
+        // 尝试给音乐播放器一个新的 src 来强制它重新加载并播放
+        musicPlayer.src += '';
+    });
+</script>
 
 </body>
 </html>
